@@ -4,12 +4,12 @@ FROM node:alpine as builder
 # prod|qa its value will be come from outside 
 ARG env=prod
 
-#RUN apk update && apk add --no-cache make git
+RUN apk update && apk add --no-cache make git
 
 # Move our files into directory name "web"
 WORKDIR /web
 COPY ./app /web
-#RUN npm install @angular/cli -g
+RUN npm install @angular/cli -g
 RUN cd /web && npm install
 
 # Build with $env variable from outside
