@@ -2,29 +2,21 @@
 
 [Angular super heroes](https://github.com/eliesser/angular-super-heroes) es una aplicación en angular configuranda con [docker](https://www.docker.io) usando como api mockup la librería [JSON Server](https://www.npmjs.com/package/json-server).
 
-## Levantar servidor mockup
-
-Una vez descargado el repo, debe instalar la librería [JSON Server](https://www.npmjs.com/package/json-server) de forma global, para poder realizarlo puede lanzar el siguiente comando: 
+## Clonar el repositorio
 
 ```bash
-$ sudo npm install -g json-server
+$ git clone https://github.com/eliesser/angular-super-heroes.git
 ```
 
-En la misma carpeta raíz debe lanzar este contacto levantar servidor mockup: 
+Posteriormente moverse al la carpeta con esta instrucción:
 
 ```bash
-$ json-server --watch db.json --port=3000
-```
-
-Estará online el api, para poder verificarla debe ir al siguiente enlace:
-
-```
-http://localhost:3000/
+$ cd angular-super-heroes
 ```
 
 ## Levantar contenedor docker
 
-Para levantar el contenedor de angular, debe tener agregado nginx:alpine a docker
+Una vez descargado el repo, para levantar el contenedor de angular, debe tener agregado nginx:alpine a docker
 
 Para poder agregarlo puede usar este comando:
 
@@ -42,4 +34,23 @@ Al finalizar de configurar el contenedor podrá ver la app en el siguiente enlac
 
 ```
 http://localhost:8080/
+```
+## Levantar servidor mockup
+
+Debe instalar la librería [JSON Server](https://www.npmjs.com/package/json-server) de forma global, para poder realizarlo puede lanzar el siguiente comando: 
+
+```bash
+$ sudo npm install -g json-server
+```
+
+En la misma carpeta raíz debe lanzar este contacto levantar servidor mockup: 
+
+```bash
+$ json-server --watch db.json --port=3000
+```
+
+Estará online el api, para poder verificarla debe ir al siguiente enlace:
+
+```
+http://localhost:3000/
 ```
