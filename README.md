@@ -44,6 +44,7 @@ Desarrollar, utilizando Angular y Typescript, una aplicación SPA que permita ha
 * Código legible usando lambdas.
 
 
+
 ## Clonar el repositorio
 
 ```bash
@@ -55,6 +56,7 @@ Posteriormente moverse al la carpeta con esta instrucción:
 ```bash
 $ cd angular-super-heroes
 ```
+
 
 ## Levantar contenedor docker
 
@@ -77,6 +79,8 @@ Al finalizar de configurar el contenedor podrá ver la app en el siguiente enlac
 ```
 http://localhost:8080/
 ```
+
+
 ## Levantar servidor mockup
 
 Debe instalar la librería [JSON Server](https://www.npmjs.com/package/json-server) de forma global, para poder realizarlo puede lanzar el siguiente comando: 
