@@ -1,0 +1,39 @@
+<mat-card
+  *ngIf="superHeroe">
+  <mat-card-header>
+    <mat-card-title>{{superHeroe.name}}</mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image class="img-super-heroe" [style]="superHeroe.img | domSanitizer">
+
+  <mat-card-content>
+    <h3>{{superHeroe.company}}</h3>
+    <p>{{superHeroe.info}}</p>
+  </mat-card-content>
+
+  <mat-card-actions
+    fxLayout="row wrap"
+    fxLayoutAlign="center"
+    fxLayoutGap="1px">
+    <button
+      class="mt-10"
+      mat-raised-button
+      [routerLink]="['/super-heroes/ver', superHeroe.id]">
+      <mat-icon>search</mat-icon> Ver
+    </button>
+    <button
+      class="mt-10"
+      mat-raised-button
+      color="accent"
+      [routerLink]="['/super-heroes/editar', superHeroe.id]">
+      <mat-icon>edit</mat-icon> Editar
+    </button>
+    <button
+      class="mt-10"
+      mat-raised-button
+      color="warn"
+      (click)="borrar()">
+      <mat-icon>delete</mat-icon> Borrar
+    </button>
+  </mat-card-actions>
+</mat-card>

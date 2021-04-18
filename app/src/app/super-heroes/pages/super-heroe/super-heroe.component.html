@@ -1,0 +1,48 @@
+<app-breadcrumb [text]="'Ver > ' + (superHeroe?.name ? superHeroe?.name:'')"></app-breadcrumb>
+
+<app-loading class="mt-10"></app-loading>
+
+<div
+  class="mt-10"
+  fxLayoutAlign="center"
+  *ngIf="superHeroe">
+
+  <mat-card
+    fxLayout="column"
+    fxLayoutGab="40px"
+    fxFlex="40"
+    fxFlex.lg="50"
+    fxFlex.md="60"
+    fxFlex.sm="80"
+    fxFlex.xs="100">
+
+    <mat-card-header>
+      <mat-card-title>
+        Super Héroe <small>{{superHeroe.name}}</small>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content
+      fxLayoutGab="40px">
+      <div
+        fxFlex="50"
+        fxLayout="column">
+        <img class="img-super-heroe" [style]="superHeroe.img | domSanitizer">
+      </div>
+      <div
+        fxFlex="50"
+        class="pl-20">
+        <div>
+          <strong>Nombre: </strong>{{superHeroe.name}}
+        </div>
+        <div class="mt-10">
+          <strong>Compañia: </strong>{{superHeroe.company}}
+        </div>
+        <div class="mt-10">
+          <strong>Información: </strong>
+          <p>{{superHeroe.info}}</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

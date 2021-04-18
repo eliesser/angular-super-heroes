@@ -1,0 +1,21 @@
+<h1>¿Esta seguro?</h1>
+<hr>
+<p>
+  Está a punto de borrar a {{data.name}}
+  <br>
+  ¿Desea continuar?
+</p>
+
+<div>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="confirmar()">
+    <mat-icon>done</mat-icon> Confirmar
+  </button>
+  <button
+    mat-raised-button
+    (click)="cancelar()">
+    <mat-icon>close</mat-icon> Cancelar
+  </button>
+</div>

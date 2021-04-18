@@ -1,0 +1,66 @@
+<app-breadcrumb [text]="'Listado'"></app-breadcrumb>
+
+<div fxLayout="column" class="mt-10">
+  <div>
+    <h2>Listado de Super Héroes</h2>
+  </div>
+  <div
+    fxLayout="row wrap"
+    fxLayoutAlign="center"
+    fxLayout.xs="column">
+    <div
+      fxFlex="70">
+      <mat-form-field fxLayout="column">
+        <input
+          #inputSearch
+          type="text"
+          placeholder="Buscar Super Héroe"
+          aria-label="Buscar Super Héroe"
+          matInput>
+      </mat-form-field>
+    </div>
+    <div>
+      <button
+        mat-raised-button
+        color="primary"
+        routerLink="/super-heroes/agregar">
+        <mat-icon>add</mat-icon> Añadir
+      </button>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<app-loading></app-loading>
+
+<div
+  class="mb-40"
+  fxLayout="row wrap"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="20px">
+  <div
+    fxFlex="30"
+    fxFlex.xl="20"
+    fxFlex.lg="20"
+    fxFlex.md="30"
+    fxFlex.sm="40"
+    *ngFor="let superHeroe of superHeroes">
+    <app-super-heroe-card [superHeroe]="superHeroe"></app-super-heroe-card>
+  </div>
+
+  <div
+    fxFlex="100"
+    fxLayout="row"
+    fxLayoutAlign="center"
+    fxLayoutGap="40px"class="mt-40"
+    *ngIf="paginas">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="getSuperHeroes(false)">
+      <mat-icon>add</mat-icon> Cargar mas Super Héroes...
+    </button>
+  </div>
+</div>
