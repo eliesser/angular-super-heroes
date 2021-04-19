@@ -71,7 +71,7 @@ $ sudo docker pull nginx:alpine
 En la raíz del repo ejecutar este comando para levantar el contenedor: 
 
 ```bash
-$ sudo docker-compose up -d
+$ sudo docker-compose up -d --build
 ```
 
 Al finalizar de configurar el contenedor podrá ver la app en el siguiente enlace:
